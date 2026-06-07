@@ -8,12 +8,16 @@
 //! - [`gain`] — Information gain and entropy computations
 //! - [`gini`] — Gini impurity and Gini gain
 //! - [`prune`] — Reduced error pruning
+//! - [`pruning`] — Cost-complexity pruning (CART weakest-link pruning)
 //! - [`predict`] — Prediction and evaluation
+//! - [`random_forest`] — Random forest ensemble classifier
 
 pub mod gain;
 pub mod gini;
 pub mod predict;
 pub mod prune;
+pub mod pruning;
+pub mod random_forest;
 pub mod tree;
 
 pub use tree::DecisionTree;
