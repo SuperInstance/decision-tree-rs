@@ -1,0 +1,13 @@
+[package]
+name = "decision-tree-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Decision tree implementation: ID3 algorithm, information gain, Gini impurity, pruning, and prediction"
+license = "MIT OR Apache-2.0"
+keywords = ["decision-tree", "machine-learning", "id3", "classification", "cart"]
+categories = ["algorithms", "mathematics", "science"]
+repository = "https://github.com/SuperInstance/decision-tree-rs"
+authors = ["SuperInstance"]
+readme = "README.md"
+
+[dependencies]
