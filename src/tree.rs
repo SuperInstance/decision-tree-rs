@@ -86,6 +86,7 @@ impl DecisionTree {
         DecisionTree { root, feature_names }
     }
 
+    #[allow(clippy::only_used_in_recursion)]
     fn build_recursive(
         samples: &[Sample],
         num_features: usize,

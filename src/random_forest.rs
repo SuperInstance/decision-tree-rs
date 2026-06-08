@@ -84,6 +84,7 @@ impl Rng {
     }
 
     /// Generate a random f64 in [0, 1).
+    #[allow(dead_code)]
     fn next_f64(&mut self) -> f64 {
         self.next_u64() as f64 / u64::MAX as f64
     }

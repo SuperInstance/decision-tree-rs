@@ -19,6 +19,7 @@ pub struct PruningResult {
 }
 
 /// Compute the impurity of a node using Gini impurity.
+#[allow(dead_code)]
 fn node_impurity(node: &TreeNode) -> f64 {
     match node {
         TreeNode::Leaf { .. } => 0.0, // Leaves are pure by definition in this model
@@ -331,8 +332,7 @@ fn accuracy_of_tree(tree: &DecisionTree, samples: &[&Sample]) -> f64 {
 /// Prune a tree to a specific alpha value.
 pub fn prune_to_alpha(tree: &DecisionTree, alpha: f64) -> DecisionTree {
     let pruning = cost_complexity_prune(tree);
-    let tree = find_tree_for_alpha(&pruning, alpha);
-    tree
+    find_tree_for_alpha(&pruning, alpha)
 }
 
 /// Simple RNG for CV shuffling.
